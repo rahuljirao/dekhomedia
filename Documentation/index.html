@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Drama Short">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Drama Short">
+	<meta name="keywords" content="Drama Short">
+	<link rel="icon" href="./assets/images/Drama Shorts.png">
+	<title>DramaShort</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap">
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/main-style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+	<div id="root"></div>
+	<div class="doc_wrapper">
+		<nav class="doc_sidebar" id="sidebar">
+			<div class="logo-col d-flex align-items-center justify-content-between">
+				<a class="d-flex align-items-center gap-2" tabindex="0" href="/" data-discover="true">
+					<img alt="ceramic-logo" loading="lazy"
+						src="./assets/images/Drama Shorts.png">DramaShort
+				</a>
+				<button id="close-doc-btn" class="close-sidebar-btn" aria-label="Close Sidebar">
+					<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+			<div class="pb-3">
+				<button type="button" class="btn btn-danger" style="width: 100%" onclick="toggleDropdown('webDropdown')">Web Installation ▼</button>
+			</div>
+			<div id="webDropdown" style="display: block;">
+				<h3>Introduction</h3>
+				<ul>
+					<li><a href="#about" onclick="scrollWithOffset('about', 80); return false;">About</a></li>
+					<li><a href="#features" onclick="scrollWithOffset('features', 80); return false;">Features</a></li>
+					<li><a href="#why" onclick="scrollWithOffset('why', 80); return false;">Why Choose Drama-Shorts</a></li>
+				</ul>
+
+				<h3>System Requirements</h3>
+				<ul>
+					<li><a href="#hardware" onclick="scrollWithOffset('hardware', 80); return false;">Hardware</a></li>
+					<li><a href="#os" onclick="scrollWithOffset('os', 80); return false;">Operating System</a></li>
+					<li><a href="#hosting" onclick="scrollWithOffset('hosting', 80); return false;">Hosting</a></li>
+					<li><a href="#notes" onclick="scrollWithOffset('notes', 80); return false;">Notes</a></li>
+				</ul>
+
+				<h3>Local Installation (For Testing)</h3>
+				<ul>
+					<li><a href="#backend" onclick="scrollWithOffset('backend', 80); return false;">Backend</a></li>
+					<li><a href="#frontend" onclick="scrollWithOffset('frontend', 80); return false;">Frontend</a></li>
+					<li><a href="#admin" onclick="scrollWithOffset('admin', 80); return false;">Admin</a></li>
+				</ul>
+
+				<h3>VPS Installation</h3>
+				<ul>
+					<li><a href="#prerequisites"
+							onclick="scrollWithOffset('prerequisites', 80); return false;">Prerequisites</a></li>
+					<li><a href="#cloudpanel" onclick="scrollWithOffset('cloudpanel', 80); return false;">CloudPanel</a>
+					</li>
+				</ul>
+
+				<h3>Project Installation on VPS</h3>
+				<ul>
+					<li><a href="#backend-installation"
+							onclick="scrollWithOffset('backend-installation', 80); return false;">Backend Installation</a>
+					</li>
+					<li><a href="#admin-installation"
+							onclick="scrollWithOffset('admin-installation', 80); return false;">Admin Installation</a>
+					</li>
+					<li><a href="#frontend-installation"
+							onclick="scrollWithOffset('frontend-installation', 80); return false;">Frontend Installation</a>
+					</li>
+				</ul>
+				<h3>Project Activate</h3>
+				<ul>
+					<li><a href="#project-activation"
+							onclick="scrollWithOffset('project-activation', 80); return false;">Verify Your Purchase</a>
+					</li>
+				</ul>
+
+				<!-- <h3>Pages Preview</h3>
+				<ul>
+					<li><a href="#pages-preview" onclick="scrollWithOffset('pages-preview', 80); return false;">Pages</a>
+					</li>
+				</ul> -->
+			</div>
+			<div class="pt-3">
+				<button type="button" class="btn btn-danger" style="width: 100%" onclick="toggleDropdown('androidDropdown')">Android Installation ▼</button>
+			</div>
+			<div id="androidDropdown" style="display: none;">
+				<h3>Introduction</h3>
+				<ul>
+					<li><a href="#android_about" onclick="scrollWithOffset('android_about', 80); return false;">About</a></li>
+					<li><a href="#android_prerequisites" onclick="scrollWithOffset('android_prerequisites', 80); return false;">Prerequisites</a></li>
+				</ul>
+
+				<h3>System Requirements</h3>
+				<ul>
+					<li><a href="#android_hardware" onclick="scrollWithOffset('android_hardware', 80); return false;">Hardware</a></li>
+				</ul>
+
+				<h3>Local Setup</h3>
+				<ul>
+					<li><a href="#android_studio_windows_setup" onclick="scrollWithOffset('android_studio_windows_setup', 80); return false;">Android Studio Windows Setup</a></li>
+				</ul>
+
+				<h3>Firebase Setup</h3>
+				<ul>
+					<li><a href="#android_firebase_setup" onclick="scrollWithOffset('android_firebase_setup', 80); return false;">Firebase Setup</a></li>
+					<li><a href="#android_link_firebase_android" onclick="scrollWithOffset('android_link_firebase_android', 80); return false;">Link Android App to Firebase</a></li>
+					<li><a href="#android_google_sign_in_configuration" onclick="scrollWithOffset('android_google_sign_in_configuration', 80); return false;">Google Sign In Configuration
+					</a></li>
+				</ul>
+				<h3>Project Configuration</h3>
+				<ul>
+					<li><a href="#extract_project" onclick="scrollWithOffset('extract_project', 80); return false;">Extract The Project</a></li>
+					<li><a href="#how_to_open" onclick="scrollWithOffset('how_to_open', 80); return false;">How to Open The Project in Android Studio?</a></li>
+				</ul>
+				<h3>Project Change</h3>
+				<ul>
+					<li><a href="#change_package_name" onclick="scrollWithOffset('change_package_name', 80); return false;">Change Package Name</a></li>
+					<li><a href="#change_app_color" onclick="scrollWithOffset('change_app_color', 80); return false;">Change App Color</a></li>
+					<li><a href="#change_app_icon" onclick="scrollWithOffset('change_app_icon', 80); return false;">Change App Icon</a></li>
+					<li><a href="#change_app_name" onclick="scrollWithOffset('change_app_name', 80); return false;">Change App Name</a></li>
+					<li><a href="#put_server_url_in_app" onclick="scrollWithOffset('put_server_url_in_app', 80); return false;">Where to put Server Url in Application</a></li>
+					<li><a href="#release_apk" onclick="scrollWithOffset('release_apk', 80); return false;">Release APK</a></li>
+				</ul>
+			</div>
+
+		</nav>
+		<div id="body-overlay" class="body-overlay"></div>
+		<main class="doc_content">
+			<header class="header-doc">
+				<div class="logo">DramaShort Docs</div>
+				<div class="d-flex items-center gap-3">
+					<ul role="list" class="d-flex align-items-center gap-3">
+						<li>
+							<a href="#">Support</a>
+						</li>
+						<li>
+							<a href="#">v1.0</a>
+						</li>
+					</ul>
+					<button class="menu-toggle" onclick="toggleSidebar()">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
+							</path>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<div class="doc_content_wrp">
+				<section class="about-section section-box" id="about">
+					<h2 class="section-title">About</h2>
+					<div class="about-header mb-2">
+						<h4>🎬 Welcome to the Admin Panel</h4>
+						<p class="section-subtitle pt-2">Powering Entertainment with Coins!</p>
+					</div>
+					<div class="about-description">
+						<p>
+							A smart admin panel to manage reels, movies, and episodes with a coin-based access system.
+							Users can unlock content or earn free coins by watching ads. This admin panel is the command
+							center for managing a dynamic content platform featuring
+							<strong class="highlight-first">reels, movies, and episodes</strong>. At the heart of
+							this ecosystem is an engaging
+							<strong class="highlight-third">coin-based access model</strong> that adds value for
+							users while giving you full control over content and user interactions.
+						</p>
+						<div class="about-block about-coins my-3 p-3 rounded border-start border-4">
+							<h3 class="block-title">💰 How the Coin System Works :</h3>
+							<p>
+								Users are assigned a specific number of <strong>coins</strong> in their account.
+								These coins act as virtual currency that can be used to
+								<strong>unlock and watch premium content</strong>—whether it's a trending reel, a
+								blockbuster movie, or an exclusive episode.
+							</p>
+						</div>
+
+						<div class="about-block about-ads my-3 p-3 rounded border-start border-4">
+							<h3 class="block-title">📺 Unlock with Ads :</h3>
+							<p>
+								To make the experience more accessible, users can also <strong>earn coins by
+									watching ads</strong>, promoting user engagement while creating monetization
+								opportunities.
+							</p>
+						</div>
+
+						<div class="about-block about-features my-3 p-3 rounded border-start border-4">
+							<h3 class="block-title">🔧 Admin Features :</h3>
+							<ul class="ps-3">
+								<li>Manage all uploaded content : reels, movies, and episodes.</li>
+								<li>Monitor and adjust user coin balances.</li>
+								<li>Track ad engagement and rewarded coins.</li>
+								<li>View detailed analytics on content performance and user behavior.</li>
+							</ul>
+						</div>
+
+						<p class="section-footer">
+							This panel puts all the power in your hands—<em>manage, monetize, and grow your content
+								platform</em> while offering users an interactive, rewarding viewing experience.
+						</p>
+					</div>
+				</section>
+
+				<section class="features-section section-box" id="features">
+					<h2 class="section-title">Features</h2>
+					<div class="row g-4">
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">🎞️ Manage Content</h5>
+									<p class="card-text">Upload, organize, and update reels, movies, and episodes
+										directly from your dashboard.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">💰 Coin System</h5>
+									<p class="card-text">Control how users spend or earn coins to unlock premium
+										content.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">📺 Ad-Based Rewards</h5>
+									<p class="card-text">Users can watch ads and receive free coins, encouraging more
+										engagement.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">📊 User Analytics</h5>
+									<p class="card-text">Monitor watch time, series views, and coin activity for better
+										content decisions.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">🛠️ Access Control</h5>
+									<p class="card-text">Set coin requirements per video and manage who can view what.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card bg-dark h-100 text-white border-1 shadow-sm about-block">
+								<div class="card-body">
+									<h5 class="card-title">🔐 Role Permissions</h5>
+									<p class="card-text">Manage the entire panel through a single admin account with
+										full control, as no additional roles or access levels are available in the
+										system.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="choose-section section-box" id="why">
+					<h2 class="section-title">Why Choose <span class="highlight-first">Drama Short</span></h2>
+					<div class="row gy-2 align-items-center">
+						<div class="col-xl-6 ">
+							<ul>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Coin-based model encourages engagement and content value.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Easy content control for reels, movies, and episodes.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Monetization through ad views and premium unlocks.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Simple dashboard for analytics and user coin tracking.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Built for creators, admins, and viewers alike.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Smooth onboarding and content setup for new users.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Real-time performance insights to boost content strategy.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Secure and scalable platform with regular feature updates.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Built-in tools to manage subscriptions and unlock tiers.
+								</li>
+								<li>
+									<i class="fa fa-check-circle text-success me-2"></i>
+									Designed for mobile-first experience and fast performance.
+								</li>
+							</ul>
+						</div>
+						<div class="col-xl-6">
+							<div class="why-banner img-wrapper rounded ">
+								<img src="./assets/images/why-drama-shot.png" alt="Why Choose Drama Short">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="hardware" class="hardware section-box">
+					<h2 class="section-title">Hardware Requirements</h2>
+					<ul class="section-list">
+						<li><strong>Memory:</strong> Minimum 2GB RAM (4GB recommended for production)</li>
+						<li><strong>Processor:</strong> Dual-core CPU or higher</li>
+						<li><strong>Storage:</strong> SSD with at least 50GB free space</li>
+						<li><strong>Network:</strong> Stable internet connection for updates & syncing</li>
+						<li><strong>GPU (Optional):</strong> For media-heavy tasks like encoding</li>
+					</ul>
+				</section>
+
+				<section id="os" class="os section-box">
+					<h2 class="section-title">Operating System Compatibility</h2>
+					<div class="section-grid">
+						<div>
+							<h3 class="subheading">Supported OS</h3>
+							<ul class="section-list">
+								<li>✅ Ubuntu 24.04 LTS or higher</li>
+								<li>✅ macOS Monterey / Ventura</li>
+								<li>✅ Windows 10 / 11</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="subheading">Recommended Setup</h3>
+							<p class="section-text">Using Ubuntu with CloudPanel for efficient server management,
+								offering a stable, secure, and user-friendly environment ideal for hosting backend
+								applications and automating DevOps tasks.</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="hosting" class="hosting section-box">
+					<h2 class="section-title">Hosting Environment</h2>
+					<ul class="section-list">
+						<li><strong>Local Testing :</strong> XAMPP, WAMP, or Node.js local server</li>
+						<li><strong>Cloud Hosting :</strong> DigitalOcean, Heroku, or Hostinger With VPS</li>
+						<li><strong>Backend :</strong> Node.js-compatible server with 1GB+ RAM</li>
+						<li><strong>Database :</strong> MYSQL</li>
+						<li><strong>DNS :</strong> Custom domain or Hostinger free domain</li>
+					</ul>
+				</section>
+
+				<section id="notes" class="notes section-box">
+					<h2 class="section-title">Important Notes</h2>
+					<ul class="section-list">
+						<li>⚠️ Always configure your <code>.env</code> properly before running builds.</li>
+						<li>🧠 Use version control (Git) to track changes across your development lifecycle.</li>
+						<li>🔑 Never expose API keys publicly — store securely in environment files.</li>
+						<li>📦 Use <code>npm audit</code> regularly to fix security vulnerabilities.</li>
+						<li>📁 Follow folder structure strictly to avoid path errors in deployment.</li>
+						<li>📦 Create frontend, backend and admin repository in github. Upload code in github directory wise </li>
+					</ul>
+				</section>
+				<section id="backend" class="backend section-box">
+					<h2 class="section-title">Local Backend Installation</h2>
+					<ol class="section-list ">
+						<li>Navigate to <code>/backend</code> directory using command prompt.</li>
+						<li>Install Node.js (If already installed then no need to install)</li>
+						<li>Run <code>npm install</code> to install dependencies.</li>
+						<li>Create database From Localhost Panel. URL look like <code>http://localhost/phpmyadmin</code>
+						</li>
+						<li>Select created database and check import option in top panel and click on that</li>
+						<li>Click on Choose File and select <code>database.sql</code> File</li>
+						<li>Set database credentials, base URLs and secrets in <code>.env</code>.</li>
+						<li>Use <code>npm start</code> to start local server</li>
+						<li>Ensure MySQL running in local environment.</li>
+					</ol>
+				</section>
+
+				<section id="frontend" class="frontend section-box">
+					<h2 class="section-title">Local Website Installation</h2>
+					<ol class="section-list">
+						<li>Navigate to <code>/frontend</code> directory using command prompt.</li>
+						<li>Install Node.js (If already installed then no need to install)</li>
+						<li>Run <code>npm install</code> to install dependencies.</li>
+						<li>Edit <code>.env</code> to set API base URL.</li>
+						<li>Use <code>npm start</code> to start local dev server.</li>
+						<li>Open <code>http://localhost:3000</code> in browser.</li>
+					</ol>
+				</section>
+
+				<section id="admin" class="frontend section-box">
+					<h2 class="section-title">Local Admin Installation</h2>
+					<ol class="section-list">
+						<li>Navigate to <code>/admin</code> directory using command prompt.</li>
+						<li>Install Node.js (If already installed then no need to install)</li>
+						<li>Run <code>npm install</code> to install dependencies.</li>
+						<li>Edit <code>.env</code> to set API base URL.</li>
+						<li>Use <code>npm start</code> to start local dev server.</li>
+						<li>Open <code>http://localhost:3001</code> in browser.</li>
+					</ol>
+				</section>
+
+				<section id="vps-installation" class="vps-installation section-box">
+					<h2>VPS Installation</h2>
+					<div class="vps-section" id="prerequisites">
+						<h3>1. Prerequisites</h3>
+						<ul class="section-list">
+							<li>Access to a VPS with root or sudo privileges (e.g., Ubuntu 24.04).</li>
+							<li>Domain name pointed to your server (optional for testing).</li>
+							<li>Basic understanding of Linux commands.</li>
+						</ul>
+					</div>
+
+					<div class="vps-section" id="cloudpanel">
+						<h3>2. CloudPanel Installation Steps</h3>
+						<ul class="section-list">
+							<li>
+								Step 1: Update your system <br>
+								<code>sudo apt update && sudo apt upgrade -y</code>
+							</li>
+							<li>
+								Step 2: Install required packages <br>
+								<code>sudo apt install curl sudo -y</code>
+							</li>
+							<li>
+								Step 3: Run CloudPanel installer (For Ubuntu 22.04 / 24.04) <br>
+								<code>curl -sSL https://installer.cloudpanel.io/ce/v2/install.sh | sudo bash</code>
+							</li>
+							<li>
+								Step 4: Access CloudPanel (Once installation is complete, open your browser and go to) <br>
+								<code>https://your-server-ip:8443</code> Follow the web-based setup wizard to create your admin account.
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section id="project-installation" class="project-installation section-box">
+					<h2>Project Installation on VPS</h2>
+					<div class="install-block" id="backend-installation">
+						<h3>1. Backend Installation</h3>
+						<ol class="section-list">
+							<li>Login in cloudpanel with credentials
+								<div class="doc-img">
+									<img src="./assets/images/server/1_login.png" alt="">
+								</div>
+							</li>
+							<li>Create Site for Backend Server
+								<div class="doc-img">
+									<img src="./assets/images/server/2_add_site.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/3_create_website.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/4_new_backend_created.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/4_new_backend_created.png" alt="">
+								</div>
+							</li>
+							<li>Manage Backend Panel
+								<div class="doc-img">
+									<img src="./assets/images/server/5_click_to_manage.png" alt="">
+								</div>
+							</li>
+							<li>Create, Manage and Import Database
+								<div class="doc-img">
+									<img src="./assets/images/server/6_create_database.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/7_database_created.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/8_click_manage_database.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/9_way_to_import.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/10_select_database.png" alt="">
+								</div>
+							</li>
+							<li>Connect SSH using below command:
+								<code>ssh backend_username@server_ip</code> Then enter site user password.
+								<div class="doc-img">
+									<img src="./assets/images/server/11_ssh_connect_terminal.png" alt="">
+								</div>
+							</li>
+							<li>Navigate to the backend directory:
+								<code>cd htdocs/api-dramashort.ukosoft.store/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/12_go_to_project_directory.png" alt="">
+								</div>
+							</li>
+							<li>Create token in github login and follow below url:
+								<code>https://github.com/settings/tokens/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/14_create_token.png" alt="">
+								</div>
+								<ol>
+									<li>Note: Enter a name (e.g., My Deployment Token)</li>
+									<li>Expiration: Choose expiry (e.g., 30 days or No expiration)</li>
+									<li>Scopes: Select the following as needed:</li>
+									<ul>
+										<li>✅ repo (Full control of private repositories)</li>
+									</ul>
+									<li>Click Generate token</li>
+									<li>Save token in safe space</li>
+								</ol>
+							</li>
+							<li>Import code from github:
+								<code>git clone git@github.com:whatever ./</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/13_clone_setup1.png" alt="">
+								</div>
+								<ol>
+									<li>
+										<code>git init</code>
+									</li>
+									<li>
+										<code>git remote add origin https://github.com/your_username/repository.git</code>
+									</li>
+									<li>
+										<code>cat ~/.git-credentials</code>
+									</li>
+									<li>
+										<code>nano ~/.git-credentials</code><br>
+									</li>
+									<li>
+										Paste below line with update with your username and token
+									</li>
+									<li>
+										<code>https://your_username:your_token@github.com</code><br>
+									</li>
+									<li>
+										Save with ctrl + x then enter Y and then press enter 
+									</li>
+									<li>
+										<code>git config --global credential.helper store</code><br>
+									</li>
+									<li>
+										<code>git config --global credential.helper</code><br>
+									</li>
+									<li>
+										<code>git fetch</code><br>
+									</li>
+									<li>
+										<code>git checkout -t origin/live</code><br>
+									</li>
+									<li>
+										<div class="doc-img">
+											<img src="./assets/images/server/15_commands_to_pull.png" alt="">
+										</div>
+									</li>
+								</ol>
+							</li>
+
+							<li>Install dependencies:
+								<code>npm install</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/16_install_packages.png" alt="">
+								</div>
+							</li>
+							<li>Install ffmpeg:
+								<code>sudo apt install ffmpeg</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/45_install_ffmpeg.png" alt="">
+								</div>
+							</li>
+							<li>Install PM2:
+								<code>npm install -g pm2</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/17_install_pm2.png" alt="">
+								</div>
+							</li>
+							<li>
+								Rename and configure the <code>.env</code> file (DB, JWT, PORT, etc.).
+								<div class="doc-img">
+									<img src="./assets/images/server/18_rename_to_env.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/19_edit_env.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/20_update_env.png" alt="">
+								</div>
+							</li>
+							<li>Start the server with PM2:
+								<code>pm2 start src/app.js</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/21_pm2_start.png" alt="">
+								</div>
+							</li>
+							<li>Check logs to confirm the server is running:
+								<code>pm2 logs 0</code>
+							</li>
+							<li>Check url to confirm the server is running:
+								<div class="doc-img">
+									<img src="./assets/images/server/22_check_server_is_connected.png" alt="">
+								</div>
+							</li>
+							<li>Install SSL Certificate:
+								<div class="doc-img">
+									<img src="./assets/images/server/23_create_ssl_certificate.png" alt="">
+								</div>
+							</li>
+							<li>Add Daily CRON
+								<div class="doc-img">
+									<img src="./assets/images/server/42_update_crone.png" alt="">
+								</div>
+							</li>
+						</ol>
+					</div>
+					<div class="install-block" id="admin-installation">
+						<h3>2. Admin Installation</h3>
+						<ol class="section-list">
+							<li>Login in cloudpanel with credentials
+								<div class="doc-img">
+									<img src="./assets/images/server/1_login.png" alt="">
+								</div>
+							</li>
+							<li>Create Site for Front End Server
+								<div class="doc-img">
+									<img src="./assets/images/server/2_add_site.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/24_create_admin_panel.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/25_create_admin_panel_1.png" alt="">
+								</div>
+							</li>
+							<li>Manage Admin Panel Server
+								<div class="doc-img">
+									<img src="./assets/images/server/26_manage_admin.png" alt="">
+								</div>
+							</li>
+							<li>Install SSL Certificate:
+								<div class="doc-img">
+									<img src="./assets/images/server/27_create_admin_ssl.png" alt="">
+								</div>
+							</li>
+							<li>Create token in github login and follow below url:
+								<code>https://github.com/settings/tokens/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/14_create_token.png" alt="">
+								</div>
+								<ol>
+									<li>Note: Enter a name (e.g., My Deployment Token)</li>
+									<li>Expiration: Choose expiry (e.g., 30 days or No expiration)</li>
+									<li>Scopes: Select the following as needed:</li>
+									<ul>
+										<li>✅ repo (Full control of private repositories)</li>
+									</ul>
+									<li>Click Generate token</li>
+									<li>Save token in safe space</li>
+								</ol>
+							</li>
+							<li>Connect SSH using below command:
+								<code>ssh admin_username@server_ip</code> Then enter site user password.
+								<div class="doc-img">
+									<img src="./assets/images/server/11_ssh_connect_admin_terminal.png" alt="">
+								</div>
+							</li>
+							<li>Navigate to the frontend directory:
+								<code>cd htdocs/admin-dramashort.ukosoft.store/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/28_way_to_admin_root.png" alt="">
+								</div>
+							</li>
+							<li>Create token in github login and follow below url:
+								<code>https://github.com/settings/tokens/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/14_create_token.png" alt="">
+								</div>
+								<ol>
+									<li>Note: Enter a name (e.g., My Deployment Token)</li>
+									<li>Expiration: Choose expiry (e.g., 30 days or No expiration)</li>
+									<li>Scopes: Select the following as needed:</li>
+									<ul>
+										<li>✅ repo (Full control of private repositories)</li>
+									</ul>
+									<li>Click Generate token</li>
+									<li>Save token in safe space</li>
+								</ol>
+							</li>
+							<li>Import code from github:
+								<code>git clone git@github.com:whatever ./</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/13_clone_setup1.png" alt="">
+								</div>
+								<ol>
+									<li>
+										<code>git init</code>
+									</li>
+									<li>
+										<code>git remote add origin https://github.com/your_username/repository.git</code>
+									</li>
+									<li>
+										<code>cat ~/.git-credentials</code>
+									</li>
+									<li>
+										<code>nano ~/.git-credentials</code><br>
+									</li>
+									<li>
+										Paste below line with update with your username and token
+									</li>
+									<li>
+										<code>https://your_username:your_token@github.com</code><br>
+									</li>
+									<li>
+										Save with ctrl + x then enter Y and then press enter 
+									</li>
+									<li>
+										<code>git config --global credential.helper store</code><br>
+									</li>
+									<li>
+										<code>git config --global credential.helper</code><br>
+									</li>
+									<li>
+										<code>git fetch</code><br>
+									</li>
+									<li>
+										<code>git checkout -t origin/main</code><br>
+									</li>
+									<li>
+										<div class="doc-img">
+											<img src="./assets/images/server/29_update_files_in server_for_admin.png" alt="">
+										</div>
+									</li>
+								</ol>
+							</li>
+							<li>
+								Rename and update the <code>.env</code> file with the production API URL.
+								<div class="doc-img">
+									<img src="./assets/images/server/30_update_env_for_admin.png" alt="">
+								</div>
+							</li>
+							<li>Install dependencies:
+								<code>npm install --force</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/38_install_dependencies_for_website.png" alt="">
+								</div>
+							</li>
+							<li>Build the production app:
+								<code>npm run build</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/31_build_project.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="copy-button">
+									<div>Update VHost file in the cloudpanel</div>
+									<div><button type="button" class="btn btn-danger" onclick="copyToClipboard('admin_code')">Copy</button></div>
+								</div>
+								<pre id="admin_code">
+									server {
+										listen 80;
+										listen [::]:80;
+										server_name admin-dramashort.ukosoft.store;
+
+										# Redirect HTTP to HTTPS
+										if ($scheme != "https") {
+											return 301 https://$host$request_uri;
+										}
+
+										location / {
+											root /home/ukosoft-admin-dramashort/htdocs/admin-dramashort.ukosoft.store/build;
+											index index.html;
+											try_files $uri /index.html;
+										}
+									}
+
+									server {
+										listen 443 ssl;
+										listen [::]:443 ssl;
+										server_name admin-dramashort.ukosoft.store;
+
+										# SSL Certificates
+										{{ssl_certificate_key}}
+										{{ssl_certificate}}
+
+										# Enable HTTP/2
+										http2 on;
+
+										# Static files
+										root /home/ukosoft-admin-dramashort/htdocs/admin-dramashort.ukosoft.store/build;
+										index index.html;
+										try_files $uri /index.html;
+
+										# Error log
+										{{nginx_access_log}}
+										{{nginx_error_log}}
+
+										# SSL configuration
+										ssl_protocols TLSv1.2 TLSv1.3;
+										ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384';
+										ssl_prefer_server_ciphers off;
+
+										# OCSP Stapling
+										ssl_stapling on;
+										ssl_stapling_verify on;
+
+										# Static file handling for cacheable assets
+										location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|ttf|otf|woff|woff2|eot|mp4|ogg|ogv|webm|webp|zip|swf)$ {
+											add_header Access-Control-Allow-Origin "*";
+											expires max;
+											access_log off;
+										}
+
+										# Well-known location
+										location ~ /.well-known {
+											auth_basic off;
+											allow all;
+										}
+
+										# Error page for server errors
+										error_page 500 502 503 504 /50x.html;
+										location = /50x.html {
+											root /usr/share/nginx/html;
+										}
+									}
+								</pre>
+								<div class="doc-img">
+									<img src="./assets/images/server/32_update_vhost_admin.png" alt="">
+								</div>
+							</li>
+						</ol>
+					</div>
+					<div class="install-block" id="frontend-installation">
+						<h3>3. Frontend Installation</h3>
+						<ol class="section-list">
+							<li>Login in cloudpanel with credentials
+								<div class="doc-img">
+									<img src="./assets/images/server/1_login.png" alt="">
+								</div>
+							</li>
+							<li>Create Site for Front End Server
+								<div class="doc-img">
+									<img src="./assets/images/server/2_add_site.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/33_create_for_website.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/server/34_create_website1.png" alt="">
+								</div>
+							</li>
+							<li>Manage Admin Panel Server
+								<div class="doc-img">
+									<img src="./assets/images/server/26_manage_admin.png" alt="">
+								</div>
+							</li>
+							<li>Install SSL Certificate:
+								<div class="doc-img">
+									<img src="./assets/images/server/35_create_ssl_for_website.png" alt="">
+								</div>
+							</li>
+							<li>Create token in github login and follow below url:
+								<code>https://github.com/settings/tokens/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/14_create_token.png" alt="">
+								</div>
+								<ol>
+									<li>Note: Enter a name (e.g., My Deployment Token)</li>
+									<li>Expiration: Choose expiry (e.g., 30 days or No expiration)</li>
+									<li>Scopes: Select the following as needed:</li>
+									<ul>
+										<li>✅ repo (Full control of private repositories)</li>
+									</ul>
+									<li>Click Generate token</li>
+									<li>Save token in safe space</li>
+								</ol>
+							</li>
+							<li>Connect SSH using below command:
+								<code>ssh website_username@server_ip</code> Then enter site user password.
+								<div class="doc-img">
+									<img src="./assets/images/server/11_ssh_connect_website_terminal.png" alt="">
+								</div>
+							</li>
+							<li>Navigate to the frontend directory:
+								<code>cd htdocs/dramashort.ukosoft.store/</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/41_import_data_to_git_website.png" alt="">
+								</div>
+							</li>
+							<li>Import code from github:
+								<code>git clone git@github.com:whatever ./</code>
+								<ol>
+									<li>
+										<code>git init</code>
+									</li>
+									<li>
+										<code>git remote add origin https://github.com/your_username/repository.git</code>
+									</li>
+									<li>
+										<code>cat ~/.git-credentials</code>
+									</li>
+									<li>
+										<code>nano ~/.git-credentials</code><br>
+									</li>
+									<li>
+										Paste below line with update with your username and token
+									</li>
+									<li>
+										<code>https://your_username:your_token@github.com</code><br>
+									</li>
+									<li>
+										Save with ctrl + x then enter Y and then press enter 
+									</li>
+									<li>
+										<code>git config --global credential.helper store</code><br>
+									</li>
+									<li>
+										<code>git config --global credential.helper</code><br>
+									</li>
+									<li>
+										<code>git fetch</code><br>
+									</li>
+									<li>
+										<code>git checkout -t origin/main</code><br>
+									</li>
+								</ol>
+								<div class="doc-img">
+									<img src="./assets/images/server/36_import_data_to_git_website.png" alt="">
+								</div>
+							</li>
+							<li>
+								Rename and update the <code>.env</code> file with the production API URL.
+								<div class="doc-img">
+									<img src="./assets/images/server/37_rename_env_website.png" alt="">
+								</div>
+							</li>
+							<li>Install dependencies:
+								<code>npm install --force</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/38_install_dependencies_for_website.png" alt="">
+								</div>
+							</li>
+							<li>Build the production app:
+								<code>npm run build</code>
+								<div class="doc-img">
+									<img src="./assets/images/server/39_create_build_for_website.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="copy-button">
+									<div>Update VHost file in the cloudpanel</div>
+									<div><button type="button" class="btn btn-danger" onclick="copyToClipboard('frontend_code')">Copy</button></div>
+								</div>
+								<pre id="frontend_code">
+									server {
+										listen 80;
+										listen [::]:80;
+										server_name dramashort.ukosoft.store;
+
+										# Redirect HTTP to HTTPS
+										if ($scheme != "https") {
+											return 301 https://$host$request_uri;
+										}
+
+										location / {
+											root /home/ukosoft-dramashort/htdocs/dramashort.ukosoft.store/build;
+											index index.html;
+											try_files $uri /index.html;
+										}
+									}
+
+									server {
+										listen 443 ssl;
+										listen [::]:443 ssl;
+										server_name dramashort.ukosoft.store;
+
+										# SSL Certificates
+										{{ssl_certificate_key}}
+										{{ssl_certificate}}
+
+										# Enable HTTP/2
+										http2 on;
+
+										# Static files
+										root /home/ukosoft-dramashort/htdocs/dramashort.ukosoft.store/build;
+										index index.html;
+										try_files $uri /index.html;
+
+										# Error log
+										{{nginx_access_log}}
+										{{nginx_error_log}}
+
+										# SSL configuration
+										ssl_protocols TLSv1.2 TLSv1.3;
+										ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384';
+										ssl_prefer_server_ciphers off;
+
+										# OCSP Stapling
+										ssl_stapling on;
+										ssl_stapling_verify on;
+
+										# Static file handling for cacheable assets
+										location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|ttf|otf|woff|woff2|eot|mp4|ogg|ogv|webm|webp|zip|swf)$ {
+											add_header Access-Control-Allow-Origin "*";
+											expires max;
+											access_log off;
+										}
+
+										# Well-known location
+										location ~ /.well-known {
+											auth_basic off;
+											allow all;
+										}
+
+										# Error page for server errors
+										error_page 500 502 503 504 /50x.html;
+										location = /50x.html {
+											root /usr/share/nginx/html;
+										}
+									}
+								</pre>
+								<div class="doc-img">
+									<img src="./assets/images/server/40_update_vhost_website.png" alt="">
+								</div>
+							</li>
+						</ol>
+					</div>
+					
+				</section>
+				<section id="project-activation" class="project-installation section-box">
+					<h2>Verify Your Purchase</h2>
+					<ol class="section-list">
+						<li>Get your purchase code to <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code" target="_blank" style="color:#FF5733">click here</a> </li>
+						<li>Admin Panel Activation
+							<div class="doc-img">
+								<img src="./assets/images/server/43_enter_credentials_for_admin_activation.png" alt="">
+							</div>
+						</li>
+						<li>Website Activation
+							<div class="doc-img">
+								<img src="./assets/images/server/44_enter_credentials_for_web_activation.png" alt="">
+							</div>
+						</li>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="android_about">
+					<h2 class="section-title">About</h2>
+					<div class="about-header mb-2">
+						<h4>🎬 Welcome to the Application</h4>
+						<p class="section-subtitle pt-2">Powering Entertainment with Coins!</p>
+					</div>
+					<div class="about-description">
+						<p>
+							Thank you for choosing the DramaShorts app. We are pleased to have you with us. Enclosed is the documentation to help you set up and launch the app easily. Please read it carefully, as it contains important information. If you need any assistance or have questions, our support team is just a message away.
+						</p>
+
+<!--						<div class="about-block about-features my-3 p-3 rounded border-start border-4">-->
+<!--							<h3 class="block-title">🔧 Application Features :</h3>-->
+<!--							<ul class="ps-3">-->
+<!--								<li>Show full stories like reels shorts</li>-->
+<!--								<li>Unlock episode using coin and watching ads</li>-->
+<!--								<li>Earn coin using watching ads, daily checkin, bind email and social media connections</li>-->
+<!--								<li>Save your favorite episode so you can watch directly from that watch list</li>-->
+<!--								<li>User show their watch history, earn history, transaction history and used and earn coin history</li>-->
+<!--							</ul>-->
+<!--						</div>-->
+					</div>
+				</section>
+				<section class="about-section section-box" id="android_prerequisites">
+					<h2 class="section-title">Prerequisites</h2>
+					<div class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>If you use the specified versions, our code will work properly because the libraries and SDKs we used have not been updated yet. Whenever those libraries are updated, we will also update the code accordingly. As long as you use the same versions, the code will function exactly as shown in the demo app without any issues, so there’s no need to worry. </li>
+							<ul class="list-new-style">
+								<li>We have used the <b>following versions in this project </b>, so you also need to use the same while setting it up: </li>
+								<ul class="list-new-style">
+									<li><a target="_blank" href="https://www.oracle.com/in/java/technologies/downloads/archive/">Java 21.0.6</a></li>
+									<li><a target="_blank" href="https://developer.android.com/studio">Android Studio Market Feature Drop</a></li>
+									<li> <span style="color:#FF5733;">Kotlin plugin: K2 mode[Text Wrapping Break]</span></li>
+								</ul>
+								<li>To modify this project, it's essential to ensure that Android Studio are installed and properly configured on your computer. </li>
+								<li>If you have already installed and configured the Android SDK, you have to check for same version of android studio, If your android studio version is old you have to just update latest version.</li>
+								<li>If you have not installed Android Studio, Plase follow the instructions which is mention below. </li>
+							</ul>
+						</ul>
+					</div>
+				</section>
+				<section id="android_hardware" class="hardware section-box">
+					<h2 class="section-title">Hardware Requirements</h2>
+					<ul class="section-list">
+						<li><strong>Memory:</strong> Minimum 2GB RAM (4GB recommended for production)</li>
+						<li><strong>Processor:</strong> Dual-core CPU or higher</li>
+						<li><strong>Storage:</strong> SSD with at least 50GB free space</li>
+						<li><strong>Network:</strong> Stable internet connection for updates & syncing</li>
+						<li><strong>GPU (Optional):</strong> For media-heavy tasks like encoding</li>
+					</ul>
+				</section>
+				<section class="about-section section-box" id="android_studio_windows_setup">
+					<h2 class="section-title">Android Studio Windows Setup </h2>
+					<div class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Follow these step-by-step instructions to download and install Android Studio on your Windows system:</li>
+							<ul class="list-new-style-numeric">
+								<li>Visit the official website: <a href="https://developer.android.com/studio" target="_blank">Android Studio</a></li>
+								<li>Click on the <strong>"Download Android Studio"</strong> button.</li>
+								<li>Accept the <strong>terms and conditions</strong>, then click <strong>Download</strong>.</li>
+								<li>Save the .exe installer to your system.</li>
+							</ul>
+
+							<li>Run the Installer:</li>
+							<ul class="list-new-style-numeric">
+								<li>Double-click the downloaded .exe file to begin the installation.</li>
+								<li>Click <strong>Next</strong> on the Android Studio Setup Wizard.</li>
+								<li>Select components to install (by default: Android Studio, Android SDK, Virtual Device, and Performance tools).</li>
+								<li>Click <strong>Next</strong>, then choose the installation path (you can keep the default).</li>
+								<li>Click <strong>Install</strong> and wait for the installation to complete.</li>
+							</ul>
+
+							<li>First-Time Configuration:</li>
+							<ul class="list-new-style-numeric">
+								<li>Click <strong>Finish</strong> to launch Android Studio.</li>
+								<li>The "Complete Installation" dialog will appear.</li>
+								<li>Choose <strong>Do not import settings</strong> if it's your first time installing Android Studio.</li>
+								<li>Android Studio will download and install additional components like the SDK.</li>
+							</ul>
+
+							<li>Android Studio Setup Wizard:</li>
+							<ul class="list-new-style-numeric">
+								<li>The Setup Wizard will guide you through the final configuration.</li>
+								<li>Choose your UI theme (Light or Dark).</li>
+								<li>Select the installation type: <strong>Standard</strong> (recommended) or <strong>Custom</strong>.</li>
+								<li>SDK components and emulator images will be downloaded (Internet required).</li>
+								<li>Click <strong>Finish</strong> once the setup is complete.</li>
+							</ul>
+						</ul>
+
+					</div>
+				</section>
+				<section class="about-section section-box" id="android_firebase_setup">
+					<h2 class="section-title">Firebase Setup</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Please navigate to your Firebase project, which you may have created while following the backend documentation. If you haven't created one yet, please follow the steps below to set up a project:</li>
+							<ul class="list-new-style-numeric">
+								<li>Begin by visiting the Firebase website through the following link: <a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </li>
+								<li>If you do not already have a Firebase account, kindly sign up for one. Otherwise, proceed to sign in with your existing account credentials.</li>
+								<li>Upon successful login, you will be directed to the Firebase Console. Click on the <strong>"Get Started in console"</strong> button to initiate the creation of a new project.
+									<div class="doc-img">
+										<img src="./assets/images/application/1.png" alt="">
+									</div>
+									<div class="doc-img">
+										<img src="./assets/images/application/2.png" alt="">
+									</div>
+								</li>
+								<li>Enter a suitable name for your project and configure your preferred options for Firebase Analytics and Google Analytics. Subsequently, click on the <strong>"Continue"</strong> button.
+									<div class="doc-img">
+										<img src="./assets/images/application/3.png" alt="">
+									</div>
+									<div class="doc-img">
+										<img src="./assets/images/application/4.png" alt="">
+									</div>
+									<div class="doc-img">
+										<img src="./assets/images/application/5.png" alt="">
+									</div>
+								</li>
+								<li> First, select the country Firebase account, then proceed to create the project.
+									<div class="doc-img">
+										<img src="./assets/images/application/6.png" alt="">
+									</div>
+									<div class="doc-img">
+										<img src="./assets/images/application/7.png" alt="">
+									</div>
+								</li>
+							</ul>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="android_link_firebase_android">
+					<h2 class="section-title">Link Android App To Firebase</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>In the next step, we have to <strong> choose the platform </strong> to add Firebase to our application. Click on Android.</li>
+							<li>The platform can be Android, iOS, Web etc...
+								<div class="doc-img">
+									<img src="./assets/images/application/8.png" alt="">
+								</div>
+							</li>
+							<li>Your package name is generally the <strong>applicationId</strong> in your <strong>build.gradle (app-level)</strong> file
+							<li>Refer to the Page for guidance on utilizing keytool <strong>to obtain the SHA-1</strong> hash of your signing certificate.
+							<li>Add your <strong>applicationid</strong>  in the first field and <strong> SHA-1</strong>  to the third field as shown in the image below.
+								<div class="doc-img">
+									<img src="./assets/images/application/9.png" alt="">
+								</div>
+							</li>
+							<li><strong>Download the google-services.json file</strong> & place it in your project's app root directory.
+								<div class="doc-img">
+									<img src="./assets/images/application/10.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/application/17.png" alt="">
+								</div>
+							</li>
+							<li><strong>Back in the Firebase console-setup workflow, click <strong>Next</strong> to skip the remaining steps and then finish and complete
+								<div class="doc-img">
+									<img src="./assets/images/application/11.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="android_google_sign_in_configuration">
+					<h2 class="section-title">Google Sign In Configuration</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Navigate to the <strong>"All Products"</strong> section and select the <strong>"Authentication"</strong> tab.
+								<div class="doc-img">
+									<img src="./assets/images/application/12.png" alt="">
+								</div>
+							</li>
+							<li>After that Navigate to the <strong>"Get Started"</strong> button.
+								<div class="doc-img">
+									<img src="./assets/images/application/13.png" alt="">
+								</div>
+							</li>
+							<li>Navigate to the <strong>"Sign-in method"</strong>. and click to <strong>google</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/14.png" alt="">
+								</div>
+							</li>
+							<li>Click to Enable</li>
+							<li> Select your support email and save
+								<div class="doc-img">
+									<img src="./assets/images/application/15.png" alt="">
+								</div>
+							</li>
+							<li> Google sign in method successfully Enabled
+								<div class="doc-img">
+									<img src="./assets/images/application/16.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="extract_project">
+					<h2 class="section-title">Extract The Project</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>To import the app, open Android Studio and import or open the template. Ensure that you wait for all processes, including the Gradle Build, to complete before proceeding to the next step.
+								<div class="doc-img">
+									<img src="./assets/images/application/18.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="how_to_open">
+					<h2 class="section-title">How to Open The Project in Android Studio?</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Open Android Studio > Open an Existing Android Studio Project > Select Your Project build. gradle file > ok</li>
+							<li>Select Project
+								<div class="doc-img">
+									<img src="./assets/images/application/19.png" alt="">
+								</div>
+								<div class="doc-img">
+									<img src="./assets/images/application/20.png" alt="">
+								</div>
+							</li>
+
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="change_package_name">
+					<h2 class="section-title">Change Package Name</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Navigate to the <strong>"android/app"</strong> directory and locate the <strong>"build.gradle.kts"</strong> file.</li>
+							<li>Within this file, update the <strong>"applicationId"</strong> and its corresponding dependencies as necessary
+								<div class="doc-img">
+									<img src="./assets/images/application/21.png" alt="">
+								</div>
+							</li>
+
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="change_app_color">
+					<h2 class="section-title">Change App Color</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Go to your project <strong>app > src > main > res > values > color.xml</strong> as shown in the below image.
+								<div class="doc-img">
+									<img src="./assets/images/application/22.png" alt="">
+								</div>
+							</li>
+
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="change_app_icon">
+					<h2 class="section-title">Change App Icon</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Go to your project <strong>File > New > Image Asset</strong> as shown in the below image.
+								<div class="doc-img">
+									<img src="./assets/images/application/23.png" alt="">
+								</div>
+							</li>
+							<li> Select Icon Path
+								<div class="doc-img">
+									<img src="./assets/images/application/24.png" alt="">
+								</div>
+							</li>
+							<li> After select logo click on <strong>Next</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/25.png" alt="">
+								</div>
+							</li>
+							<li> Confirm your icon then click on <strong>Finish</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/26.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="change_app_name">
+					<h2 class="section-title">Change App Name</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Go to your project <strong>app > src > main > res > values > strings.xml</strong> as shown in the below image.
+								<div class="doc-img">
+									<img src="./assets/images/application/27.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="put_server_url_in_app">
+					<h2 class="section-title">Where to put Server Url in Application?</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Select <strong>Root > local.properties</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/28.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="copy-button">
+									<div>Copy this code</div>
+									<div><button type="button" class="btn btn-danger" onclick="copyToClipboard('andoid_code')">Copy</button></div>
+								</div>
+								<pre id="andoid_code">
+									APPLOVIN_KEY=YOUR_KEY
+									BASE_URL=YOUR_HOST_DOMAIN/
+									SHA_256=sha256/YOUR_SHA256_GENERATED_KEY
+									
+									#Don't Change
+									HOST_EMAIL=admin@123.com
+									HOST_DISPLAY_NAME=Testing
+									HOST_LOGIN_TYPE_ID=1
+									HOST_PROFILE_URL=1
+									HOST_LOGIN_TYPE_GUEST=guest
+									HOST_LOGIN_TYPE_GOOGLE=google
+									#HOST_LOGIN_TYPE_FB=facebook
+								</pre>
+							</li>
+							<li>Select <strong>Root > local.properties</strong> and past your code here
+								<div class="doc-img">
+									<img src="./assets/images/application/38.png" alt="">
+								</div>
+							</li>
+							<li>After paste code enter your <strong>APPLOVIN_KEY, BASE_URL</strong> and <strong>SHA_256 key</strong> 
+								<div class="doc-img">
+									<img src="./assets/images/application/39.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="copy-button">
+									<div>For generate sha 256 key from your server command line using below code</div>
+									<div><button type="button" class="btn btn-danger" onclick="copyToClipboard('server_code')">Copy</button></div>
+								</div>
+								<pre id="server_code">
+openssl s_client -connect YOUR_HOST_DOMAIN:443 -servername YOUR_HOST_DOMAIN </dev/null 2>/dev/null | openssl x509 -noout -pubkey | openssl pkey -pubin -outform DER | openssl dgst -sha256 -binary | base64
+								</pre>
+								<div class="doc-img">
+									<img src="./assets/images/application/34.png" alt="">
+								</div>
+							</li>
+							<li>Update Other url like about us, privacy policy and terms and conditions</li>
+							<li>Select <strong>App > src > main > java > com > app > reelshort > UI > Fragment > ProfileFragment</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/29.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+				<section class="about-section section-box" id="release_apk">
+					<h2 class="section-title">Release APK</h2>
+					<ol class="about-description">
+						<ul class="ps-3 list-new-style">
+							<li>Select from navbar <strong>Build > Generate Signed App Bundle or APK</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/30.png" alt="">
+								</div>
+							</li>
+							<li>Select <strong>Android App Bundle</strong>
+								<div class="doc-img">
+									<img src="./assets/images/application/31.png" alt="">
+								</div>
+							</li>
+							<li>Select or Create new JKS file
+								<div class="doc-img">
+									<img src="./assets/images/application/32.png" alt="">
+								</div>
+							</li>
+							<li>Select release and create AAB file for play store
+								<div class="doc-img">
+									<img src="./assets/images/application/33.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</ol>
+				</section>
+			</div>
+		</main>
+	</div>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+
+</html>

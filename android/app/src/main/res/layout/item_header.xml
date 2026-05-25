@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_subscribe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:backgroundTintMode="src_in"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvHeader"
+        style="@style/BodyLargeBold"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="@string/subscribe"
+        android:textColor="@color/whiteMy"
+        android:textSize="@dimen/_14sdp" />
+</LinearLayout>

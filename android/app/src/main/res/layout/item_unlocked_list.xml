@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_10sdp"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/episode_background"
+        android:padding="@dimen/_10sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/coin"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                style="@style/BodyLargeBold"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="Weekly VIP"
+                android:textColor="@color/whiteMy"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/episode"
+                style="@style/BodyLargeBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                tools:text="Episode 4"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                />
+
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/BodyLargeBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                tools:text="june 12, 2025"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_coin"
+            android:drawablePadding="@dimen/_10sdp"
+            android:background="@drawable/ic_btn"
+            android:text="-10"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/whiteMy"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
+

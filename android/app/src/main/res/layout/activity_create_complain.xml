@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:id="@+id/ll_earn_rewards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+
+                android:src="@drawable/ic_arrow_left"
+                app:tint="@color/whiteMy" />
+
+            <TextView
+                style="@style/BodySmallMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:text="Raise Complain"
+                android:textColor="@color/whiteMy"
+                android:textSize="@dimen/_14sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_rewards"
+                android:visibility="invisible"
+                app:tint="@color/whiteMy" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progressLayout"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/radius10"
+        android:backgroundTintMode="src_in"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details"
+            android:textColor="@color/whiteMy"
+            style="@style/BodyLargeBold"
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_btn"
+            android:backgroundTint="#111111"
+            android:padding="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Exclusive "-->
+<!--                style="@style/BodySmallRegular"-->
+<!--                android:textColor="@color/whiteMy"-->
+<!--                />-->
+
+            <EditText
+                android:id="@+id/input_name"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="#2B2B2B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColorHint="@color/gray"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                style="@style/BodySmallRegular"
+                android:textColor="@color/whiteMy"
+                />
+
+            <EditText
+                android:id="@+id/btnEmailInput"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="#2B2B2B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/gray"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                style="@style/BodySmallRegular"
+                android:textColor="@color/whiteMy"
+
+                />
+
+            <Spinner
+                android:id="@+id/reason"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="#2B2B2B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                style="@style/spinner"
+                />
+
+
+            <EditText
+                android:id="@+id/description"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="#2B2B2B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textColorHint="@color/gray"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                style="@style/BodySmallRegular"
+                android:textColor="@color/whiteMy"
+                />
+
+            <TextView
+                android:id="@+id/btn_complain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complain"
+                style="@style/BodyLargeBold"
+                android:textColor="@color/whiteMy"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textAlignment="center"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="@color/Red"
+                android:paddingVertical="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

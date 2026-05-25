@@ -1,0 +1,136 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- ViewPager2 should be the scrolling content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_35sdp"
+        >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/whiteMy"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/search_input"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:background="@drawable/btn_search"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350sdp"
+                android:orientation="vertical">
+
+                <com.app.dramashort.View.NestedScrollableHost
+                    android:id="@+id/nestedViewPagerHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true">
+
+                    <com.app.dramashort.View.Carousel.ImageCarousel
+                        android:id="@+id/carousel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="@dimen/_10sdp"
+                        app:autoPlay="true"
+                        app:autoPlayDelay="2000"
+                        app:autoWidthFixing="true"
+                        app:captionMargin="@dimen/_10sdp"
+                        app:captionTextSize="@dimen/_12sdp"
+                        app:carouselBackground="#333333"
+                        app:carouselGravity="CENTER"
+                        app:carouselType="BLOCK"
+                        app:imagePlaceholder="@drawable/carousel_default_placeholder"
+                        app:imageScaleType="centerCrop"
+                        app:indicatorMargin="0dp"
+                        app:infiniteCarousel="true"
+                        app:nextButtonLayout="@layout/next_button_layout"
+                        app:nextButtonMargin="@dimen/_4sdp"
+                        app:previousButtonLayout="@layout/previous_button_layout"
+                        app:previousButtonMargin="@dimen/_4sdp"
+                        app:scaleOnScroll="false"
+                        app:scalingFactor="0.15"
+                        app:showBottomShadow="false"
+                        app:showCaption="true"
+                        app:showIndicator="true"
+                        app:showNavigationButtons="true"
+                        app:showTopShadow="false"
+                        app:touchToPause="true" />
+                </com.app.dramashort.View.NestedScrollableHost>
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            app:tabIndicator="@drawable/tab_indicator_height"
+            app:tabIndicatorColor="@color/whiteMy"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="bottom"
+            app:tabMode="scrollable"
+            app:tabPadding="@dimen/_1sdp"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/whiteMy"
+            app:tabTextColor="@color/whiteLight2" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/progressLayout"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

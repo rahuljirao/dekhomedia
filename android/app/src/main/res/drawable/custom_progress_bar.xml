@@ -1,0 +1,30 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background (full) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <solid android:color="@color/gray2"/>
+        </shape>
+    </item>
+
+    <!-- Buffered progress -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip android:clipOrientation="horizontal" android:gravity="left">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <solid android:color="@color/gray_light"/>
+            </shape>
+        </clip>
+    </item>
+
+    <!-- Played progress -->
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="horizontal" android:gravity="left">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <solid android:color="#FFFFFF"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.dramashort.Utils.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+        <!-- Lock Icon (hidden by default) -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/episode_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+            <!-- Episode Number or Label -->
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="TRAILER"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+
+                />
+        </FrameLayout>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageLock"-->
+<!--            android:layout_width="@dimen/_10sdp"-->
+<!--            android:layout_height="@dimen/_10sdp"-->
+<!--            android:layout_gravity="top|end"-->
+<!--            android:src="@drawable/ic_lock"-->
+<!--            app:tint="@android:color/white"-->
+<!--            android:background="@drawable/btn_plan_bg"-->
+<!--            android:backgroundTint="@color/Red"-->
+<!--            android:paddingHorizontal="@dimen/_5sdp"-->
+<!--            />-->
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageLock"
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_gravity="top|end"
+            android:src="@drawable/ic_lock"
+            app:tint="@android:color/white"
+            android:background="@drawable/btn_plan_bg"
+            android:backgroundTint="@color/Red"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:textStyle="bold"
+            style="@style/BodyXSmallRegular"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/music_anim"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="bottom|end"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/music_anim"
+            android:layout_marginEnd="@dimen/_2sdp"
+
+            />
+
+        <TextView
+            android:id="@+id/requiredCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_coin14"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="-6"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_2sdp"
+            android:visibility="invisible"
+            />
+    </FrameLayout>
+</com.app.dramashort.Utils.SquareFrameLayout>
+

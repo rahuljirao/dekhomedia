@@ -1,0 +1,5 @@
+<!-- res/drawable/btn_watch_ads_state.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_btn_disabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/ic_btn_color_shadow" android:state_enabled="true"/>
+</selector>

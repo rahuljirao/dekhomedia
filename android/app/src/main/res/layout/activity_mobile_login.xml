@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <!-- Full-screen dark background image (same as sign-in screen) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_image_sigh_in"
+        android:alpha="0.4" />
+
+    <!-- Dark overlay -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC050505">
+
+        <!-- Top: Back button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_arrow_left"
+            android:visibility="gone"
+            app:tint="@color/whiteMy" />
+
+        <!-- Center content card -->
+        <LinearLayout
+            android:id="@+id/contentCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/ic_btn"
+            android:backgroundTint="#1AFFFFFF"
+            android:orientation="vertical"
+            android:padding="@dimen/_24sdp">
+
+            <!-- App logo -->
+            <ImageView
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher" />
+
+            <!-- Title -->
+            <TextView
+                style="@style/BodyLargeBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Enter Your Mobile Number"
+                android:textColor="@color/whiteMy"
+                android:textSize="@dimen/_16sdp" />
+
+            <!-- Subtitle -->
+            <TextView
+                style="@style/BodySmallRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:text="We'll use this to personalise your experience"
+                android:textColor="@color/whiteLight"
+                android:textSize="@dimen/_11sdp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_18sdp"
+                android:background="@color/bg_color_light2" />
+
+            <!-- Mobile number label -->
+            <TextView
+                style="@style/BodySmallMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:text="Mobile Number"
+                android:textColor="@color/whiteLight" />
+
+            <!-- Mobile number input row (flag + code + number) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_btn"
+                android:backgroundTint="@color/bg_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_2sdp">
+
+                <!-- Country code prefix (non-editable) -->
+                <TextView
+                    android:id="@+id/tvCountryCode"
+                    style="@style/BodySmallRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:text="+91"
+                    android:textColor="@color/whiteLight"
+                    android:textSize="@dimen/_13sdp" />
+
+                <!-- Thin vertical separator -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:background="@color/bg_color_light2"
+                    android:layout_marginEnd="@dimen/_8sdp" />
+
+                <!-- Phone input -->
+                <EditText
+                    android:id="@+id/etMobileNumber"
+                    style="@style/BodySmallRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="10-digit mobile number"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/whiteMy"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <!-- Error text (hidden by default) -->
+            <TextView
+                android:id="@+id/tvError"
+                style="@style/BodySmallRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#FF5252"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+
+            <!-- Continue button -->
+            <TextView
+                android:id="@+id/btnLogin"
+                style="@style/BodyLargeBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/ic_btn_color"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Continue"
+                android:textColor="@color/whiteMy"
+                android:textSize="@dimen/_13sdp" />
+
+            <!-- Privacy note -->
+            <TextView
+                style="@style/BodyXSmallRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:text="Your number is safe with us and will not be shared with anyone."
+                android:textColor="@color/gray2" />
+
+        </LinearLayout>
+
+        <!-- Loading overlay (covers full screen) -->
+        <RelativeLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/orange" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

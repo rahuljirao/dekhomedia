@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/progressLayout"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_rev" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_earn_rewards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/ic_arrow_left"
+            app:tint="@color/whiteMy" />
+
+        <TextView
+            style="@style/BodySmallMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/store"
+            android:textColor="@color/whiteMy"
+            android:textSize="@dimen/_14sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_rewards"
+            android:visibility="invisible"
+            app:tint="@color/whiteMy" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/onPlayll"
+        android:layout_below="@+id/ll_earn_rewards">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/radius10"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/walletBalance"
+                        style="@style/BodyLargeBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:text="Your Balance ?"
+                        android:textColor="@color/whiteMy"
+                        android:textSize="@dimen/_14sdp"
+                        app:drawableStartCompat="@drawable/ic_coin" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/coinBalance"
+                                style="@style/BodySmallMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/whiteMy"
+                                android:textSize="@dimen/_25sdp" />
+
+                            <TextView
+                                style="@style/BodySmallMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="Coin"
+                                android:textAlignment="center"
+                                android:textColor="@color/whiteMy"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:background="@color/bg_color_light2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/rewards_coins"
+                                style="@style/BodySmallMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/whiteMy"
+                                android:textSize="@dimen/_25sdp" />
+
+                            <TextView
+                                style="@style/BodySmallMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="@string/rewards_coins"
+                                android:textAlignment="center"
+                                android:textColor="@color/whiteMy"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/plansRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_sub_list" />
+
+
+            <!--            <TextView-->
+            <!--                style="@style/BodySmallMedium"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/_10sdp"-->
+            <!--                android:drawablePadding="@dimen/_5sdp"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:text="VIP Plans &amp; Coin Refill"-->
+            <!--                android:textColor="@color/whiteMy"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                app:drawableStartCompat="@drawable/ic_crown" />-->
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/ll_subscribe"-->
+            <!--                android:layout_width="match_parent"-->
+
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:backgroundTintMode="src_in"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    style="@style/BodyLargeBold"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:paddingHorizontal="@dimen/_10sdp"-->
+            <!--                    android:text="@string/subscribe"-->
+            <!--                    android:textColor="@color/whiteMy"-->
+            <!--                    android:textSize="@dimen/_14sdp" />-->
+
+            <!--                <androidx.recyclerview.widget.RecyclerView-->
+            <!--                    android:id="@+id/subscribeRV"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+            <!--                    tools:itemCount="2"-->
+            <!--                    tools:listitem="@layout/item_sub_list" />-->
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/ll_refill"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:backgroundTintMode="src_in"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    style="@style/BodyLargeBold"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:paddingHorizontal="@dimen/_10sdp"-->
+            <!--                    android:text="@string/refill"-->
+            <!--                    android:textColor="@color/whiteMy"-->
+            <!--                    android:textSize="@dimen/_14sdp"-->
+
+            <!--                    />-->
+
+            <!--                <androidx.recyclerview.widget.RecyclerView-->
+            <!--                    android:id="@+id/refillRv"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingHorizontal="@dimen/_5sdp"-->
+            <!--                    android:paddingTop="@dimen/_5sdp"-->
+            <!--                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+            <!--                    app:spanCount="2"-->
+            <!--                    tools:listitem="@layout/item_refill_plan" />-->
+            <!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/onPlayll"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shap_rectangle_top"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:elevation="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15sdp">
+
+        <!-- Paytm Icon -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgPayCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/whiteMy"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <ImageView
+                android:id="@+id/imgPay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_stripe_rounded" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/paymentConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPayCardView"
+            app:layout_constraintStart_toEndOf="@+id/imgPayCardView"
+            app:layout_constraintTop_toTopOf="@+id/imgPayCardView">
+            <!-- Text: Pay via -->
+            <TextView
+                android:id="@+id/tvPayVia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay via"
+                android:textColor="@color/whiteMy"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvMethod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Text: Paytm -->
+            <TextView
+                android:id="@+id/tvMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Pay"
+                android:textColor="@color/whiteMy"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvPayVia"
+                app:layout_constraintTop_toBottomOf="@+id/tvPayVia" />
+
+            <!-- Dropdown Icon -->
+            <ImageView
+                android:id="@+id/imgArrow"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_arrow_bottom"
+                app:layout_constraintBottom_toBottomOf="@id/tvMethod"
+                app:layout_constraintStart_toEndOf="@id/tvMethod"
+                app:layout_constraintTop_toTopOf="@+id/tvMethod" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Pay Button -->
+        <TextView
+            android:id="@+id/btnContinue"
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/radius20"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            tools:text="Pay ₹399"
+            android:text=""
+            android:textColor="@color/whiteMy"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+
+
+

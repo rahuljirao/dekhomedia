@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp">
+    <!-- Lock Icon (hidden by default) -->
+
+    <LinearLayout
+        android:id="@+id/mainLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_refill_selected_border"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp"
+        >
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:text="$ 100000"
+            style="@style/BodyLargeBold"
+            android:textColor="@color/whiteMy"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                tools:text="3000"
+                app:drawableStartCompat="@drawable/ic_coin"
+                android:paddingEnd="@dimen/_2sdp"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus"
+                android:tint="@color/gold"
+                />
+            <TextView
+                android:id="@+id/extra_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                tools:text="300"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_10sdp"
+                android:paddingStart="@dimen/_2sdp"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:background="@drawable/btn_plan_bg"
+        android:backgroundTint="@color/Red"
+        android:paddingHorizontal="@dimen/_5sdp"
+        tools:text="100% Discount"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        style="@style/BodyXSmallRegular"
+        />
+</FrameLayout>

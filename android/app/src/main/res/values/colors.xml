@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">@color/colorMain</color>
+    <color name="colorPrimary">@color/colorMain</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+
+    <color name="colorMain">@color/orange</color>
+    <color name="bg_color">#101010</color>
+    <color name="bg_color_light">#202020</color>
+    <color name="bg_color_light2">#1AFFFFFF</color>
+    <color name="stroke_color">#FFFFCD67</color>
+
+
+    <color name="orange2">#676D75</color>
+    <color name="orange">#FF5733</color>
+    <color name="orangeLight">#1AFF5733</color>
+    <color name="whiteMy">#FFFFFFFF</color>
+    <color name="white20">#34FFFFFF</color>
+    <color name="whiteLight">#A3FFFFFF</color>
+    <color name="whiteLight2">#80E8E8E8</color>
+    <color name="btnBgColor">#2A2928</color>
+
+
+
+
+    <!--  Bottom Navigation colors -->
+    <color name="NavActiveIcon">#CC4629</color>
+    <color name="NavInactiveIcon">#B3B3B3</color>
+    <color name="NavActiveText">#CC4629</color>
+    <color name="NavInactiveText">#B0B0B0</color>
+    <color name="NavActivePill">#14992F1D</color>
+
+
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red_400">#F44336</color>
+
+
+    <color name="gray">#707070</color>
+    <color name="gray2">#909090</color>
+
+
+    <!--Nav-->
+    <color name="bottomNavBgColor">#ffffff</color>
+
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="Red">#FF0000</color>
+
+    <!-- Thumb colors -->
+    <color name="switch_thumb_on">#FFFFFF</color> <!-- Green for ON -->
+    <color name="switch_thumb_off">#909090</color> <!-- Grey for OFF -->
+    <!-- Track colors -->
+    <color name="switch_track_on">#FF7C2A</color> <!-- Light green for ON -->
+    <color name="switch_track_off">#DEDEDE</color> <!-- Light grey for OFF -->
+
+
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#B0B0B0</color>
+    <color name="bg_2">#111111</color>
+    <color name="gray_light">#C5C5C5</color>
+    <color name="gold">#FFFFCD67</color>
+
+
+    <!-- Add these color definitions to res/values/colors.xml -->
+    <color name="status_pending">#FFC107</color>
+    <color name="status_in_process">#03A9F4</color>
+    <color name="status_completed">#4CAF50</color>
+    <color name="status_cancelled">#F44336</color>
+
+
+    <!--    <color name="colorMain">@color/whiteMy</color>-->
+
+
+    <!--    <color name="orange2">#676D75</color>-->
+    <!--    <color name="orange">#FF7C2A</color>-->
+    <!--    <color name="whiteMy">#FFFFFFFF</color>-->
+    <!--    <color name="whiteLight">#A3FFFFFF</color>-->
+    <!--    <color name="whiteLight2">#80E8E8E8</color>-->
+
+
+    <!--    <color name="colorAccent">@color/whiteMy</color>-->
+    <!--    <color name="colorPrimary">@color/whiteMy</color>-->
+    <!--    <color name="colorPrimaryDark">#ffffff</color>-->
+
+    <!--    <color name="gray">#676D75</color>-->
+
+
+    <!--    &lt;!&ndash;Nav&ndash;&gt;-->
+    <!--    <color name="bottomNavBgColor">#ffffff</color>-->
+
+
+    <!--    <color name="teal_200">#FF03DAC5</color>-->
+    <!--    <color name="teal_700">#FF018786</color>-->
+
+
+    <!--    <color name="black">#FF000000</color>-->
+    <!--    <color name="Red">#FF0000</color>-->
+    <!--    <color name="bg_color">#000000</color>-->
+
+    <!--    &lt;!&ndash; Thumb colors &ndash;&gt;-->
+    <!--    <color name="switch_thumb_on">#FFFFFF</color> &lt;!&ndash; Green for ON &ndash;&gt;-->
+    <!--    <color name="switch_thumb_off">#909090</color> &lt;!&ndash; Grey for OFF &ndash;&gt;-->
+    <!--    &lt;!&ndash; Track colors &ndash;&gt;-->
+    <!--    <color name="switch_track_on">#FF7C2A</color> &lt;!&ndash; Light green for ON &ndash;&gt;-->
+    <!--    <color name="switch_track_off">#DEDEDE</color> &lt;!&ndash; Light grey for OFF &ndash;&gt;-->
+
+
+    <!--    <color name="card_stroke">#E0E0E0</color>-->
+    <!--    <color name="text_primary">#212121</color>-->
+    <!--    <color name="text_secondary">#757575</color>-->
+    <!--    <color name="text_hint">#B0B0B0</color>-->
+    <!--    <color name="bg_2">#111111</color>-->
+
+</resources>

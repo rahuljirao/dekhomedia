@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "373952562076",
+    "project_id": "reelshort-8ad4e",
+    "storage_bucket": "reelshort-8ad4e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373952562076:android:735425710c1ee2b62a3e59",
+        "android_client_info": {
+          "package_name": "com.app.dramashort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373952562076-7ginlql7ti0itk9pb3be4q0i5c3ej96k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.dramashort",
+            "certificate_hash": "d1cf50aa084af45812a276e639dc6f3550f1d2a2"
+          }
+        },
+        {
+          "client_id": "373952562076-ksk8sfog9j99eak8m6h5avsfh4plkone.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.dramashort",
+            "certificate_hash": "7ab5533a90d42b6df5869c129006d8900d806ce4"
+          }
+        },
+        {
+          "client_id": "373952562076-c587ns4mb1m327a9gjhsj7re5cg2m0l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY19WtBq4VcuqmSrBnne62eudxmcn4H5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373952562076-c587ns4mb1m327a9gjhsj7re5cg2m0l5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
